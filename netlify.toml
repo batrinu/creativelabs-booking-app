@@ -1,0 +1,12 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Enable Identity and Git Gateway
+[context.production.environment]
+  NETLIFY_CMS_GITHUB_REPO = ""  # Add your GitHub repo here: owner/repo-name
